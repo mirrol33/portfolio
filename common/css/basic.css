@@ -42,6 +42,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 링크 색상을 부모 요소의 색으로 상속 */
+	-webkit-tap-highlight-color: transparent; /* 웹킷 기반 브라우저에서 선택 효과 제거 */
+}
 /* root */
 :root {
 	--basic-font-family: "Circular Medium", "Noto Sans KR";
