@@ -129,6 +129,16 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
     .section_03 .list-box {
         width: 100%;
     }
+
+    .section_03 .list-box .txtArea {
+        line-height: 1.4rem;
+    }
+    .section_03 .list-box .txtArea b {
+        display: block;
+    }
+    .section_03 .list-box .txtArea em {
+        font-size: 1rem;
+    }
     .section_05 .txtArea {
         font-size: 1.4rem;
     }
