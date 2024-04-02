@@ -96,12 +96,16 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
     background:#eee;
 }
 
+.section_05 .inner {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+}
+
 .section_05 .txtArea {
     font-size: 2rem;
     line-height: 1.2em;
     text-align: left;
-    width: 90%;
-    margin: 0 auto;
     line-height: 1.2em;
 }
 
