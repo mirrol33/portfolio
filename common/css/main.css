@@ -116,11 +116,10 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
     .section_03 .list-box {
         width: 48%;
     }
-    .section_03 .list-box .txtArea b {
-        
-    }
-    .section_03 .list-box .txtArea em {
-        
+    .section_03 .list-box .txtArea p {
+        align-content: flex-start;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 }
 
@@ -157,8 +156,10 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
     .section_03 .list-box .txtArea {
         line-height: 1.4rem;
     }
-    .section_03 .list-box .txtArea b {
-        
+    .section_03 .list-box .txtArea p {
+        align-content: flex-start;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
     .section_03 .list-box .txtArea em {
         font-size: 1rem;
