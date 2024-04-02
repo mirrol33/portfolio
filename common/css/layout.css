@@ -9,16 +9,18 @@ body {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+    gap: 1rem;    
 }
 
 /* header */
 header {
-    position: relative; 
+    position: relative;
+    padding: 1em 0; 
     width: 100%; 
     height: auto;
     background:#f4f4f4; 
-    color:#000;
+    color:#222;
     font-family: var(--head-font-family);
     font-size:24px;
     font-weight: 400;
@@ -27,10 +29,11 @@ header {
 header .inner {
     position: relative;
     margin: 0 auto;
-    width:98%;
+    padding: 0;
+    width:90%;
 }
 header .logo {
-    position: absolute; 
+    position:absolute; 
     left:0; 
     top:0; 
     padding:0.4em 0;
@@ -43,53 +46,20 @@ header .sns {
     padding:0.4em 0;
 }
 header .sns li a {
-    padding:0.2em;
+    padding:0.1em;
 }
 header .sns li a svg {
     width: 1em;
     height: auto;
 }
 header nav {
-    visibility: visible;
+
 }
 header nav li {
     position: relative; 
     box-sizing: border-box; 
     padding: 0.8em; 
     font-size: 1rem;
-}
-
-/* main */
-main {
-    position: relative;
-    margin: 0n auto;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    font-family: var(--basic-font-family);
-}
-section {
-    text-align:center;
-    letter-spacing: -0.1rem;
-}
-.section_01 {
-    margin: 0 auto;
-    padding: 10em 0;
-    position: relative;
-    width: 60%;
-}
-.section_01 .bg-title {
-    font-size: 8rem;
-    color: #f1f1f1;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-}
-.section_01 .main-title {
-    font-size: 4rem;
-    text-align: center;
-    position: relative;
-    width:100%;
 }
 
 /* footer */
@@ -100,11 +70,14 @@ footer {
     background:#222;
     color:#fff;
 }
+footer .inner {
+    padding: 2em 0;
+}
 footer .copyright {
     position: relative;
     margin: 0 auto;
-    width: 98%;
-    padding: 1em 0; 
+    width: 90%;
+    padding: 0; 
     font-family: var(--head-font-family);
     font-size: 1rem;
     font-weight:100;
@@ -113,22 +86,20 @@ footer .copyright {
 /* mobile ver. */
 @media only screen and (max-width: 767px) {
     /* header mobile ver. */
+    header {
+        padding: 1rem;
+    }
     header .inner {
-        width:96%;
-    }
-    header nav {
-        visibility: hidden;
-    }
-    
-    /* main mobile ver. */
-    .section_01 {
         width: 96%;
     }
-    .section_01 .bg-title {
-        font-size: 5rem;
+    header .logo {
+        position: relative;
     }
-    .section_01 .main-title {
-        font-size: 2rem;
+    header nav {
+        display: none !important;
+    }
+    header .sns {
+        display: none !important;
     }
 
     /* footer mobile ver. */

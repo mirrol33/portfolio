@@ -1,0 +1,116 @@
+/* main */
+main {
+    position: relative;
+    margin: 0n auto;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-family: var(--basic-font-family);
+}
+section {
+    text-align:center;
+    letter-spacing: -0.1rem;
+    position: relative;
+    padding: 10rem 0;    
+    width: 100%;
+}
+
+section h1 {font-size: 10rem;}
+section h2 {font-size: 4rem; margin-bottom: 4rem;}
+
+.section_01 {
+    margin: 0 auto;
+    padding: 10rem 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.section_01 .bg-title {
+    color: #ccc;
+    text-align: center;
+}
+.section_01 .main-title {
+    font-size: 4rem;
+    text-align: center;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.section_02 {
+    background:#000;
+    color:#fff;
+}
+.section_02 .skill-list {
+    font-size: 2rem;
+    line-height:1.2em;
+}
+.section_02 .study-skill {
+    opacity:0.6;
+}
+.section_03 .history-list {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+}
+.section_03 .list-box {
+    position:relative;
+    text-align: left;
+    font-family: var(--head-font-family);
+    font-size: 24px;
+    letter-spacing: -0.2px;
+    width: 32.3%;
+}
+.section_03 .list-box .img-box {
+    width: 100%;
+    height: 250px;
+    border-radius: 1em;
+    background: #f4f4f4;
+}
+.section_03 .list-box .txtArea {
+    font-size: 1em;
+    background: #ccc;
+    padding: 0.6em;
+    margin-top: -1em;
+    border-radius: 0em 0em 1em 1em;
+}
+.section_03 .list-box .txtArea b {
+    font-weight: 600;
+}
+.section_03 .list-box .txtArea em {
+    font-size: 0.6em;
+}
+
+.section_04 {
+    background:#eee;
+}
+
+.section_05 .txtArea {
+    font-size: 2rem;
+    line-height: 1.2em;
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.2em;
+}
+
+.section_05 .txtArea h3 {
+    color: #aaa;
+    font-size:1.2em;
+    line-height: 1.2em;
+}
+
+/* mobile ver. */
+@media only screen and (max-width: 767px) {
+    /* main mobile ver. */
+    section h1 {font-size:5rem;}
+    section h2 {font-size:2rem; margin-bottom: 2rem;}
+
+    .section_01 {
+        width: 96%;
+    }
+
+    .section_01 .main-title {
+        font-size: 2rem;
+    }
+}
