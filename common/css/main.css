@@ -52,6 +52,7 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
     position: relative;
     margin: 0 auto;
     width: 90%;
+    align-items: flex-start;
 }
 .section_03 .list-box {
     position:relative;
@@ -59,7 +60,7 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
     font-family: var(--head-font-family);
     font-size: 18px;
     letter-spacing: -0.2px;
-    width: 32.3%;
+    width: 31.3%;
 }
 .section_03 .list-box .img-box {
     width: 100%;
@@ -74,11 +75,21 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
     margin-top: -1em;
     border-radius: 0em 0em 1em 1em;
 }
-.section_03 .list-box .txtArea b {
+.section_03 .list-box .txtArea p {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 1rem;
+    line-height: 1.4em;
+}
+.section_03 .list-box .txtArea p b {
     font-weight: 600;
 }
-.section_03 .list-box .txtArea em {
-    font-size: 0.6em;
+.section_03 .list-box .txtArea p em {
+    font-size: 0.8em;
 }
 
 .section_04 {
@@ -98,6 +109,19 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
     color: #aaa;
     font-size:1.2em;
     line-height: 1.2em;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* 태블릿 기기를 위한 스타일 지정 */
+    .section_03 .list-box {
+        width: 48%;
+    }
+    .section_03 .list-box .txtArea b {
+        
+    }
+    .section_03 .list-box .txtArea em {
+        
+    }
 }
 
 /* mobile ver. */
@@ -134,10 +158,11 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
         line-height: 1.4rem;
     }
     .section_03 .list-box .txtArea b {
-        display: block;
+        
     }
     .section_03 .list-box .txtArea em {
         font-size: 1rem;
+        
     }
     .section_05 .txtArea {
         font-size: 1.4rem;
