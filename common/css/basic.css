@@ -45,4 +45,5 @@ table {
 /* root */
 :root {
 	--basic-font-family: "Circular Medium", "Noto Sans KR";
+	--head-font-family: "Noto Sans KR";
 }
