@@ -115,7 +115,8 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
     }
 
     .section_01 .main-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        width: 90%;
     }
 
     .section_02 .skill-list {
