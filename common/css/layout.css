@@ -42,6 +42,9 @@ header .sns li a svg {
     width: 1em;
     height: auto;
 }
+header nav {
+    visibility: visible;
+}
 header nav li {
     position: relative; 
     box-sizing: border-box; 
@@ -56,14 +59,22 @@ section {
 }
 .section_01 {
     margin: 0 auto;
-    padding:10em 0;
+    padding: 10em 0;
+    position: relative;
     width: 80%;
 }
 .section_01 .bg-title {
-    font-size: 8em;
+    font-size: 8rem;
+    color: #f1f1f1;
+    text-align: center;
+    position: absolute;
+    width: 100%;
 }
 .section_01 .main-title {
-    font-size: 4em;
+    font-size: 4rem;
+    text-align: center;
+    position: relative;
+    width:100%;
 }
 
 /* footer */
@@ -77,4 +88,20 @@ footer {
 footer .copyright {
     padding: 0.4em; 
     font-size: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+    /* header mobile ver. */
+    header nav {
+        visibility: hidden;
+    }
+    
+    /* main mobile ver. */
+    .section_01 .bg-title {
+        font-size: 4rem;
+    }
+    .section_01 .main-title {
+        font-size: 2rem;
+    }
+
 }
