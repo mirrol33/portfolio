@@ -57,7 +57,7 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
     position:relative;
     text-align: left;
     font-family: var(--head-font-family);
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: -0.2px;
     width: 32.3%;
 }
@@ -103,8 +103,12 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
 /* mobile ver. */
 @media only screen and (max-width: 767px) {
     /* main mobile ver. */
+    section {
+        padding: 6em 0;
+    }
+
     section h1 {font-size:4rem;}
-    section h2 {font-size:2rem; margin-bottom: 2rem;}
+    section h2 {font-size:2.8rem; margin-bottom: 2rem;}
 
     .section_01 {
         width: 96%;
@@ -114,10 +118,17 @@ section h2 {font-size: 4rem; margin-bottom: 4rem;}
         font-size: 2rem;
     }
 
+    .section_02 .skill-list {
+        font-size: 1.4rem;
+    }
+
     .section_03 .history-list {
         width: 96%;
     }
     .section_03 .list-box {
         width: 100%;
+    }
+    .section_05 .txtArea {
+        font-size: 1.4rem;
     }
 }
