@@ -43,11 +43,13 @@ if (isMobile) {
 
 let startX;
 let startY;
+let lastY;
 
 function handleTouchStart(event) {
     const touch = event.touches[0];
     startX = touch.clientX;
     startY = touch.clientY;
+    lastY = startY;
 }
 
 function handleTouchMove(event) {
@@ -56,23 +58,24 @@ function handleTouchMove(event) {
     }
 
     const touch = event.touches[0];
-    const deltaX = touch.clientX - startX;
-    const deltaY = touch.clientY - startY;
+    const deltaY = touch.clientY - lastY;
 
-    if (Math.abs(deltaY) > Math.abs(deltaX)) {
-        event.preventDefault();
-        updateSlide(touch.clientY - skillList.getBoundingClientRect().top);
-    }
+    event.preventDefault();
+    updateSlide(deltaY);
+    lastY = touch.clientY;
 }
 
 function moveSlide(e) {
-    const mouseY = e.clientY - skillList.getBoundingClientRect().top;
-    updateSlide(mouseY);
+    const mouseY = e.clientY;
+    const deltaY = mouseY - lastY;
+
+    updateSlide(deltaY);
+    lastY = mouseY;
 }
 
-function updateSlide(mouseY) {
+function updateSlide(deltaY) {
     const listHeight = skillList.clientHeight;
-    const percentage = mouseY / listHeight;
+    const percentage = deltaY / listHeight;
 
     let translateY = 0;
     translateY = percentage * (lis.length * 30); // 요소의 수에 따라 계산
