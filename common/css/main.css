@@ -46,13 +46,13 @@ section h2 {
     color:#fff;
 }
 .section_02 .skill-list {
-    font-size: 2rem;
     line-height: 2.4rem;
     display: inline-block;
     padding: 0 2em;
 }
 .section_02 .skill-list li {
-    transition: font-size 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-size: 2rem;
     opacity:0.5;
 }
 .section_02 .skill-list li:hover {
