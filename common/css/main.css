@@ -31,8 +31,9 @@ section h2 {
     height: 100%;
 }
 .section_01 em span {
-    letter-spacing: -0.6rem;
+    letter-spacing: -1rem;
 }
+
 .section_01 .about-text {
     font-size: 2rem;
     text-align: center;
@@ -150,6 +151,10 @@ section h2 {
 
     .section_01 {
         width: 96%;
+    }
+
+    .section_01 em span {
+        letter-spacing: -0.6rem;
     }
 
     .section_01 .about-text {
