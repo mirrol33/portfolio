@@ -30,7 +30,10 @@ section h2 {
     width: 100%;
     height: 100%;
 }
-.section_01 .main-title {
+.section_01 em span {
+    letter-spacing: -0.6rem;
+}
+.section_01 .about-text {
     font-size: 2rem;
     text-align: center;
     position: relative;
@@ -44,10 +47,26 @@ section h2 {
 }
 .section_02 .skill-list {
     font-size: 2rem;
-    line-height:1.2em;
+    line-height: 2.4rem;
+    overflow: hidden;
+    max-height: 400px;
+    transition: max-height 0.5s ease-out;
+    display: inline-block;
+    padding: 0 2em;
 }
-.section_02 .study-skill {
-    opacity:0.6;
+.section_02 .skill-list li {
+    transition: transform 0.5s ease-out, font-size 0.3s ease-in-out;
+    opacity:0.5;
+}
+.section_02 .skill-list li:hover {
+    font-size: 4rem;
+    opacity: 1;
+}
+.section_02 .skill-list li:first-child {
+    margin-top:24px;
+}
+.section_02 .skill-list li:last-child {
+    margin-bottom:24px;
 }
 .section_03 .history-list {
     position: relative;
@@ -142,13 +161,16 @@ section h2 {
         width: 96%;
     }
 
-    .section_01 .main-title {
+    .section_01 .about-text {
         font-size: 1.8rem;
         width: 90%;
     }
 
     .section_02 .skill-list {
         font-size: 1.4rem;
+    }
+    .section_02 .skill-list li:hover {
+        font-size: 2.4rem;
     }
 
     .section_03 .history-list {

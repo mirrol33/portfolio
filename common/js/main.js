@@ -16,3 +16,77 @@ function getRandomColor() {
 
 // 1초마다 폰트 컬러 변경
 setInterval(changeColor, 200);
+
+// skill 마우스 슬라이드 효과
+const skillList = document.querySelector('.skill-list');
+const lis = skillList.querySelectorAll('li');
+
+// User Agent를 이용하여 기기를 구분
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (isMobile) {
+    // 모바일 기기인 경우 터치 이벤트를 사용
+    skillList.addEventListener('touchstart', handleTouchStart, false);
+    skillList.addEventListener('touchmove', handleTouchMove, false);
+    skillList.addEventListener('touchend', resetSlide, false);
+} else {
+    // PC인 경우 마우스 이벤트를 사용
+    skillList.addEventListener('mouseenter', function() {
+        skillList.addEventListener('mousemove', moveSlide);
+    });
+
+    skillList.addEventListener('mouseleave', function() {
+        skillList.removeEventListener('mousemove', moveSlide);
+        resetSlide();
+    });
+}
+
+let startX;
+let startY;
+
+function handleTouchStart(event) {
+    const touch = event.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+}
+
+function handleTouchMove(event) {
+    if (!startX || !startY) {
+        return;
+    }
+
+    const touch = event.touches[0];
+    const deltaX = touch.clientX - startX;
+    const deltaY = touch.clientY - startY;
+
+    if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        event.preventDefault();
+        updateSlide(touch.clientY - skillList.getBoundingClientRect().top);
+    }
+}
+
+function moveSlide(e) {
+    const mouseY = e.clientY - skillList.getBoundingClientRect().top;
+    updateSlide(mouseY);
+}
+
+function updateSlide(mouseY) {
+    const listHeight = skillList.clientHeight;
+    const percentage = mouseY / listHeight;
+
+    let translateY = 0;
+    translateY = percentage * (lis.length * 30); // 요소의 수에 따라 계산
+
+    lis.forEach(li => {
+        li.style.transform = `translateY(-${translateY}%)`;
+    });
+}
+
+function resetSlide() {
+    lis.forEach(li => {
+        li.style.transform = 'translateY(0)';
+    });
+
+    startX = null;
+    startY = null;
+}
