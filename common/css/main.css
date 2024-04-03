@@ -108,6 +108,30 @@ section h2 {
     background:#eee;
 }
 
+.project-box{
+    cursor:pointer;
+    font-size:4rem;
+    color: #ccc;
+    display: inline-block;
+    border: 1px solid #000;
+    padding: 2rem;
+    position: relative;
+  }
+.project-box img{
+    height:100%;
+    position:absolute;
+    opacity:0;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 400px;
+}
+.project-box:hover{
+    color: #000;
+}
+.project-box:hover img{
+    opacity:0.8;
+}
+
 .section_05 .inner {
     position: relative;
     margin: 0 auto;
