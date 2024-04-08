@@ -83,6 +83,10 @@ section h2 {
     font-size: 4rem;
     opacity: 1;
 }
+.section_03 {
+    background: url("/images/flower_pattern_bg.jpg") repeat;
+    background-attachment: fixed;
+}
 .section_03 .history-list {
     position: relative;
     margin: 0 auto;
