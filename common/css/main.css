@@ -10,10 +10,10 @@ main {
 section {
     text-align:center;
     letter-spacing: -0.1rem;
-    position: relative;
-    padding: 10rem 0;    
+    position: relative;    
     width: 100%;
-    height: 100vh;
+    min-height: 90vh;
+    padding-bottom:10rem;
 }
 
 section h1 {
@@ -22,6 +22,7 @@ section h1 {
 section h2 {
     font-size: 4rem; 
     margin-bottom: 2rem;
+    padding-top:10rem;
 }
 
 .section_01 {
@@ -40,6 +41,21 @@ section h2 {
     position: relative;
     width: 60%;
     margin: 0 auto;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 비율을 유지하기 위한 값 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .section_02 {
