@@ -1,68 +1,76 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuLinks = document.querySelectorAll('header nav a');
     const sections = document.querySelectorAll('main section');
+    let isScrolling = false; // 스크롤 중 여부를 나타내는 플래그
 
     menuLinks.forEach(function(menuLink) {
         menuLink.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                scrollTo(targetSection.offsetTop);
+            if (targetSection && !isScrolling) {
+                smoothScrollTo(targetSection.offsetTop);
             }
             setActive(menuLink);
         });
     });
 
     window.addEventListener('scroll', function() {
-        const fromTop = window.scrollY;
+        if (!isScrolling) {
+            const fromTop = window.scrollY;
 
-        sections.forEach(function(section) {
-            if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-                setActive(document.querySelector('header nav a[href="#' + section.id + '"]'));
-            }
-        });
+            sections.forEach(function(section) {
+                if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                    setActive(document.querySelector('header nav a[href="#' + section.id + '"]'));
+                }
+            });
+        }
     });
 
-    function scrollTo(targetPosition) {
-        const currentPosition = window.pageYOffset;
-        const distance = targetPosition - currentPosition;
+    function smoothScrollTo(targetPosition) {
+        isScrolling = true; // 스크롤 중임을 표시
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
         const duration = 500; // milliseconds
-        let start = null;
+        const startTime = performance.now(); // 시작 시간을 기록
 
-        window.requestAnimationFrame(function step(timestamp) {
-            if (!start) start = timestamp;
-            const progress = timestamp - start;
-            window.scrollTo(0, easeInOutCubic(progress, currentPosition, distance, duration));
-            if (progress < duration) {
-                window.requestAnimationFrame(step);
+        function scrollStep(timestamp) {
+            const currentTime = timestamp - startTime;
+            const progress = Math.min(currentTime / duration, 1); // 진행률은 0과 1 사이의 값으로 제한
+            const easedProgress = easeInOutCubic(progress);
+            window.scrollTo(0, startPosition + distance * easedProgress);
+
+            if (currentTime < duration) {
+                window.requestAnimationFrame(scrollStep);
             } else {
-                window.scrollTo(0, targetPosition);
+                isScrolling = false; // 스크롤 완료 후 플래그를 false로 설정하여 다음 스크롤 이벤트를 허용
             }
-        });
+        }
+
+        window.requestAnimationFrame(scrollStep);
     }
 
-    function easeInOutCubic(t, b, c, d) {
-        // cubic easing in/out
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t * t + b;
+    function easeInOutCubic(t) {
+        // Cubic easing in/out 함수
+        t *= 2;
+        if (t < 1) return 0.5 * t * t * t;
         t -= 2;
-        return c / 2 * (t * t * t + 2) + b;
+        return 0.5 * (t * t * t + 2);
     }
 
     function setActive(clickedLink) {
         menuLinks.forEach(function(link) {
-            link.classList.remove('active');
+            if (link === clickedLink) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
         });
-        if (clickedLink) {
-            clickedLink.classList.add('active');
-        }
     }
 });
 
 
-  
-  
+
   
 /* 랜덤 컬러 텍스트 */
 function changeColor() {
