@@ -23,7 +23,7 @@ header {
     padding: 1em 0; 
     width: 100%; 
     height: auto;
-    background:#f4f4f4; 
+    background:rgba(255,255,255,0.5); 
     color:#222;
     font-family: var(--head-font-family);
     font-size:24px;
