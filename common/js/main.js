@@ -69,6 +69,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+/* 상단 메뉴 바 스크롤 다운시 색상 변경 */
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    let isScrolling = false;
+    let scrollTimeout;
+
+    window.addEventListener('scroll', function() {
+        header.classList.add('blur');
+        clearTimeout(scrollTimeout);
+
+        if (!isScrolling) {
+            isScrolling = true;
+        }
+
+        // 스크롤 중이면 0.1초 후에 isScrolling을 false로 설정
+        scrollTimeout = setTimeout(function() {
+            header.classList.remove('blur');
+            isScrolling = false;
+        }, 100);
+
+        if (window.scrollY === 0) {
+            header.classList.remove('opaque');
+        } else {
+            header.classList.add('opaque');
+        }
+    });
+});
 
 
   

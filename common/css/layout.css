@@ -19,16 +19,24 @@ header {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 99;
+    z-index: 1000;
     padding: 1em 0; 
     width: 100%; 
     height: auto;
-    background:rgba(255,255,255,0.5); 
-    color:#222;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    color:#fff;
     font-family: var(--head-font-family);
     font-size:24px;
     font-weight: 400;
     letter-spacing: -0.2px;
+}
+header.opaque {
+    background:rgba(255, 255, 255, .4);
+    color:#222; 
+}
+.blur {
+    backdrop-filter: blur(4px);
 }
 header .inner {
     position: relative;
@@ -55,8 +63,11 @@ header .sns li a {
 header .sns li a svg {
     width: 1em;
     height: auto;
+    fill: #fff;
 }
-
+header.opaque .sns li a svg {
+    fill: #222;
+}
 header nav li {
     position: relative; 
     box-sizing: border-box; 
@@ -64,10 +75,13 @@ header nav li {
     font-size: 1rem;
 }
 header nav li a {
-    color:#000;
+    color:#fff;
+}
+header.opaque nav li a {
+    color:#222;
 }
 header nav li a.active {
-    color:#ccc;
+    color:#aaa;
 }
 /* footer */
 footer {
