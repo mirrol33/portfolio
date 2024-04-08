@@ -113,16 +113,12 @@ section h2 {
     font-size:4rem;
     color: #ccc;
     display: inline-block;
-    border: 1px solid #000;
     padding: 2rem;
     position: relative;
   }
 
 .project-box:hover{
     color: #000;
-}
-.project-box:hover img{
-    opacity:0.8;
 }
 
 .section_05 .inner {

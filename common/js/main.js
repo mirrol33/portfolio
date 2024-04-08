@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         image.style.opacity = '0'; // 이미지를 처음에 숨김
 
         box.addEventListener('mouseenter', function() {
-            image.style.opacity = '1'; // 마우스가 상자 위에 있을 때 이미지를 나타냄
+            image.style.opacity = '0.5'; // 마우스가 상자 위에 있을 때 이미지를 나타냄
         });
 
         document.addEventListener('mousemove', function(event) {
