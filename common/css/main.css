@@ -13,6 +13,7 @@ section {
     position: relative;
     padding: 10rem 0;    
     width: 100%;
+    height: 100vh;
 }
 
 section h1 {
@@ -28,7 +29,6 @@ section h2 {
     padding: 10rem 0;
     position: relative;
     width: 100%;
-    height: 100%;
 }
 .section_01 em span {
     letter-spacing: -1rem;
@@ -55,6 +55,7 @@ section h2 {
     transition: all 0.3s ease-in-out;
     font-size: 2rem;
     opacity:0.5;
+    padding:0.4em;
 }
 .section_02 .skill-list li:hover {
     font-size: 4rem;

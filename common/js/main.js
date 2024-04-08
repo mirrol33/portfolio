@@ -1,3 +1,70 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const menuLinks = document.querySelectorAll('header nav a');
+    const sections = document.querySelectorAll('main section');
+
+    menuLinks.forEach(function(menuLink) {
+        menuLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                scrollTo(targetSection.offsetTop);
+            }
+            setActive(menuLink);
+        });
+    });
+
+    window.addEventListener('scroll', function() {
+        const fromTop = window.scrollY;
+
+        sections.forEach(function(section) {
+            if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                setActive(document.querySelector('header nav a[href="#' + section.id + '"]'));
+            }
+        });
+    });
+
+    function scrollTo(targetPosition) {
+        const currentPosition = window.pageYOffset;
+        const distance = targetPosition - currentPosition;
+        const duration = 500; // milliseconds
+        let start = null;
+
+        window.requestAnimationFrame(function step(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            window.scrollTo(0, easeInOutCubic(progress, currentPosition, distance, duration));
+            if (progress < duration) {
+                window.requestAnimationFrame(step);
+            } else {
+                window.scrollTo(0, targetPosition);
+            }
+        });
+    }
+
+    function easeInOutCubic(t, b, c, d) {
+        // cubic easing in/out
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t * t + b;
+        t -= 2;
+        return c / 2 * (t * t * t + 2) + b;
+    }
+
+    function setActive(clickedLink) {
+        menuLinks.forEach(function(link) {
+            link.classList.remove('active');
+        });
+        if (clickedLink) {
+            clickedLink.classList.add('active');
+        }
+    }
+});
+
+
+  
+  
+  
+/* 랜덤 컬러 텍스트 */
 function changeColor() {
     const spans = document.querySelectorAll('.is-colored span');
     spans.forEach(span => {

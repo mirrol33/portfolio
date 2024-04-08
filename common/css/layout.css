@@ -16,7 +16,10 @@ body {
 
 /* header */
 header {
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
     padding: 1em 0; 
     width: 100%; 
     height: auto;
@@ -53,16 +56,19 @@ header .sns li a svg {
     width: 1em;
     height: auto;
 }
-header nav {
 
-}
 header nav li {
     position: relative; 
     box-sizing: border-box; 
     padding: 0.8em; 
     font-size: 1rem;
 }
-
+header nav li a {
+    color:#000;
+}
+header nav li a.active {
+    color:#ccc;
+}
 /* footer */
 footer {
     position: relative; 
