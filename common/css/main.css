@@ -117,14 +117,7 @@ section h2 {
     padding: 2rem;
     position: relative;
   }
-.project-box img{
-    height:100%;
-    position:absolute;
-    opacity:0;
-    transform: translate(-50%,-50%);
-    width: 600px;
-    height: 400px;
-}
+
 .project-box:hover{
     color: #000;
 }
