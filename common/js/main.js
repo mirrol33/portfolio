@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showImage(e){
 
         for(var i = 0; i < image.length; i++){
+            // 전체 웹 브라우저 화면을 기준으로한 마우스 위치 계산
             mouseX = e.clientX;
             mouseY = e.clientY;
 
@@ -177,9 +178,9 @@ document.addEventListener('DOMContentLoaded', function() {
             var imageY = mouseY - imageHeight / 2;
             console.log(imageX, imageY);
 
-            image[i].style.transform = `translate(${imageX}px, ${imageY}px)`;
-            // image[i].style.left = imageX + 'px';
-            // image[i].style.top = imageY + 'px';
+            // image[i].style.transform = `translate(${imageX}px, ${imageY}px)`;
+            image[i].style.left = imageX + 'px';
+            image[i].style.top = imageY + 'px';
         }
         
     }
