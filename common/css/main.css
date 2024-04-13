@@ -140,7 +140,7 @@ section h2 {
 /* Projects style */
 #Projects {
     background:#f1f1f1;
-    color: #aaa;
+    color: #111;
 }
 #Projects ul {
     display: flex;
@@ -154,10 +154,11 @@ section h2 {
     font-size: 4em;
     line-height: 2em;
 }
+
 #Projects ul:hover li:not(:hover) a {
     opacity: 0.5;
     color: transparent;
-    -webkit-text-stroke: 1px #111;
+    -webkit-text-stroke: 1px #000;
 }
 
 .project-box a {
@@ -181,6 +182,9 @@ section h2 {
 }
 
 /* Contact style */
+#Contact {
+    width: 100%;
+}
 #Contact .inner {
     position: relative;
     margin: 0 auto;
