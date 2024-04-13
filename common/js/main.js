@@ -120,40 +120,69 @@ function getRandomColor() {
 setInterval(changeColor, 200);
 
 /* 마우스 따라다니는 프로젝트 이미지 */
-document.addEventListener('DOMContentLoaded', function() {
-    var projectBoxes = document.querySelectorAll('.project-box');
+// document.addEventListener('DOMContentLoaded', function() {
+//     var projectBoxes = document.querySelectorAll('.project-box');
     
-    projectBoxes.forEach(function(box) {
-        var image = box.querySelector('.image');
-        image.style.position = 'fixed'; // 이미지의 position을 fixed로 변경
-        image.style.pointerEvents = 'none';
-        image.style.opacity = '0'; // 이미지를 처음에 숨김
+//     projectBoxes.forEach(function(box) {
+//         var image = box.querySelector('.image');
+//         image.style.position = 'fixed'; // 이미지의 position을 fixed로 변경
+//         image.style.pointerEvents = 'none';
+//         image.style.opacity = '0'; // 이미지를 처음에 숨김
 
-        box.addEventListener('mouseenter', function() {
-            image.style.opacity = '0.5'; // 마우스가 상자 위에 있을 때 이미지를 나타냄
-        });
+//         box.addEventListener('mouseenter', function() {
+//             image.style.opacity = '0.5'; // 마우스가 상자 위에 있을 때 이미지를 나타냄
+//         });
 
-        document.addEventListener('mousemove', function(event) {
-            var mouseX = event.clientX; // 전체 웹 브라우저 화면을 기준으로한 마우스 위치 계산
-            var mouseY = event.clientY;
+//         document.addEventListener('mousemove', function(event) {
+//             var mouseX = event.clientX; // 전체 웹 브라우저 화면을 기준으로한 마우스 위치 계산
+//             var mouseY = event.clientY;
 
-            var imageWidth = image.offsetWidth;
-            var imageHeight = image.offsetHeight;
+//             var imageWidth = image.offsetWidth;
+//             var imageHeight = image.offsetHeight;
 
-            // 이미지의 중심 좌표 계산
+//             // 이미지의 중심 좌표 계산
+//             var imageX = mouseX - imageWidth / 2;
+//             var imageY = mouseY - imageHeight / 2;
+
+//             // 이미지가 화면을 벗어나지 않도록 조정
+//             imageX = Math.min(Math.max(imageX, 0), window.innerWidth - imageWidth);
+//             imageY = Math.min(Math.max(imageY, 0), window.innerHeight - imageHeight);
+
+//             image.style.left = imageX + 'px';
+//             image.style.top = imageY + 'px';
+//         });
+
+//         box.addEventListener('mouseleave', function() {
+//             image.style.opacity = '0'; // 마우스가 상자를 떠날 때 이미지를 숨김
+//         });
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    let image = document.querySelectorAll('.image');
+
+    function showImage(e){
+
+        for(var i = 0; i < image.length; i++){
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+            // 이미지 사이즈 측정
+            var imageWidth = image[i].offsetWidth;
+            var imageHeight = image[i].offsetHeight;
+
+            // 이미지 중심 좌표 계산
             var imageX = mouseX - imageWidth / 2;
             var imageY = mouseY - imageHeight / 2;
+            console.log(imageX, imageY);
 
-            // 이미지가 화면을 벗어나지 않도록 조정
-            imageX = Math.min(Math.max(imageX, 0), window.innerWidth - imageWidth);
-            imageY = Math.min(Math.max(imageY, 0), window.innerHeight - imageHeight);
+            image[i].style.transform = `translate(${imageX}px, ${imageY}px)`;
+            // image[i].style.left = imageX + 'px';
+            // image[i].style.top = imageY + 'px';
+        }
+        
+    }
+    document.addEventListener('mousemove', showImage);
 
-            image.style.left = imageX + 'px';
-            image.style.top = imageY + 'px';
-        });
-
-        box.addEventListener('mouseleave', function() {
-            image.style.opacity = '0'; // 마우스가 상자를 떠날 때 이미지를 숨김
-        });
-    });
 });

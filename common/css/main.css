@@ -1,4 +1,4 @@
-/* main */
+/* main Common Css */
 main {
     position: relative;
     margin: 0n auto;
@@ -14,7 +14,6 @@ section {
     width: 100%;
     padding-bottom:10rem;
 }
-
 section h1 {
     font-size: 8rem;
 }
@@ -24,24 +23,25 @@ section h2 {
     padding-top:10rem;
 }
 
-.section_01 {
+/* About style */
+#About {
     margin: 0 auto;
     padding: 10rem 0;
     position: relative;
     width: 100%;
 }
-.section_01 em span {
+#About em span {
     letter-spacing: -1rem;
 }
-
-.section_01 .about-text {
+#About .about-text {
+    width: 60%;
+    margin: 0 auto;
     font-size: 2rem;
     text-align: center;
     position: relative;
-    width: 60%;
-    margin: 0 auto;
+    color: var(--bg-font-color);
 }
-.videoArea {
+#About .videoArea {
     position: absolute;
     left: 0;
     top: 0;
@@ -49,14 +49,13 @@ section h2 {
     height: 100vh;
     z-index: -1;
 }
-.video-container {
+#About .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 비율을 유지하기 위한 값 */
     height: 0;
     overflow: hidden;
 }
-
-.video-container video {
+#About .video-container video {
     position: absolute;
     top: 0;
     left: 0;
@@ -64,36 +63,43 @@ section h2 {
     height: 100%;
 }
 
-.section_02 {
-    background:#000;
-    color:#fff;
+/* Skills style */
+#Skills {
+    background:var(--basic-bg-color);
+    color: #ccc;
 }
-.section_02 .skill-list {
-    line-height: 2.4rem;
-    display: inline-block;
-    padding: 0 2em;
+#Skills ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
-.section_02 .skill-list li {
+#Skills ul li a {
     transition: all 0.3s ease-in-out;
-    font-size: 2rem;
-    opacity:0.5;
-    padding:0.4em;
+    font-size: 4em;
+    padding: 0.2em;
+    color: var(--bg-font-color);
+    line-height: 1.25em;
 }
-.section_02 .skill-list li:hover {
-    font-size: 4rem;
-    opacity: 1;
+#Skills ul:hover li:not(:hover) a {
+    opacity: 0.5;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
 }
-.section_03 {
+
+/* Work style */
+#Work {
     background: url("/images/flower_pattern_bg.jpg") repeat;
     background-attachment: fixed;
 }
-.section_03 .history-list {
+#Work .history-list {
     position: relative;
     margin: 0 auto;
     width: 90%;
     align-items: flex-start;
 }
-.section_03 .list-box {
+#Work .list-box {
     position:relative;
     text-align: left;
     font-family: var(--head-font-family);
@@ -101,20 +107,20 @@ section h2 {
     letter-spacing: -0.2px;
     width: 31.3%;
 }
-.section_03 .list-box .img-box {
+#Work .list-box .img-box {
     width: 100%;
     height: 240px;
     border-radius: 1em;
     background: #f4f4f4;
 }
-.section_03 .list-box .txtArea {
+#Work .list-box .txtArea {
     font-size: 1em;
     background: #ccc;
     padding: 0.8em;
     margin-top: -1em;
     border-radius: 0em 0em 1em 1em;
 }
-.section_03 .list-box .txtArea p {
+#Work .list-box .txtArea p {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -124,44 +130,71 @@ section h2 {
     gap: 0 1rem;
     line-height: 1.4em;
 }
-.section_03 .list-box .txtArea p b {
+#Work .list-box .txtArea p b {
     font-weight: 600;
 }
-.section_03 .list-box .txtArea p em {
+#Work .list-box .txtArea p em {
     font-size: 0.8em;
 }
 
-.section_04 {
-    background:#eee;
+/* Projects style */
+#Projects {
+    background:#f1f1f1;
+    color: #aaa;
+}
+#Projects ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#Projects ul li a {
+    color: #111;
+    font-size: 4em;
+    line-height: 2em;
+}
+#Projects ul:hover li:not(:hover) a {
+    opacity: 0.5;
+    color: transparent;
+    -webkit-text-stroke: 1px #111;
 }
 
-.project-box{
-    cursor:pointer;
-    font-size:4rem;
-    color: #ccc;
-    display: inline-block;
-    padding: 2rem;
-    position: relative;
-  }
-
-.project-box:hover{
-    color: #000;
+.project-box a {
+    z-index: 2;
 }
 
-.section_05 .inner {
+.project-box .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    width: 0;
+    transition: width 0.3s;
+}
+.project-box:hover .image {
+    width: 400px;
+    opacity: 0.5;
+
+}
+
+/* Contact style */
+#Contact .inner {
     position: relative;
     margin: 0 auto;
     width: 90%;
 }
 
-.section_05 .txtArea {
+#Contact .txtArea {
     font-size: 2rem;
     line-height: 1.2em;
     text-align: left;
     line-height: 1.2em;
 }
 
-.section_05 .txtArea h3 {
+#Contact .txtArea h3 {
     color: #aaa;
     font-size:1.2em;
     line-height: 1.2em;
@@ -169,19 +202,19 @@ section h2 {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     /* 태블릿 기기를 위한 스타일 지정 */
-    .section_03 .list-box {
+    #Work .list-box {
         width: 48%;
     }
-    .section_03 .list-box .txtArea p {
+    #Work .list-box .txtArea p {
         align-content: flex-start;
         justify-content: flex-start;
         align-items: flex-start;
     }
 }
 
-/* mobile ver. */
+/* Mobile ver. */
 @media only screen and (max-width: 767px) {
-    /* main mobile ver. */
+
     section {
         padding: 6em 0;
     }
@@ -189,46 +222,49 @@ section h2 {
     section h1 {font-size:4rem;}
     section h2 {font-size:2.8rem; margin-bottom: 2rem;}
 
-    .section_01 {
+    /* Mobile About style */
+    #About {
         width: 96%;
     }
 
-    .section_01 em span {
+    #About em span {
         letter-spacing: -0.6rem;
     }
 
-    .section_01 .about-text {
+    #About .about-text {
         font-size: 1.8rem;
         width: 90%;
     }
 
-    .section_02 .skill-list {
+    /* Mobile Skills style */
+    #Skills ul {
         font-size: 1.4rem;
     }
-    .section_02 .skill-list li:hover {
-        font-size: 2.4rem;
-    }
 
-    .section_03 .history-list {
+
+    /* Mobile Work style */
+    #Work .history-list {
         width: 96%;
     }
-    .section_03 .list-box {
+    #Work .list-box {
         width: 100%;
     }
 
-    .section_03 .list-box .txtArea {
+    #Work .list-box .txtArea {
         line-height: 1.4rem;
     }
-    .section_03 .list-box .txtArea p {
+    #Work .list-box .txtArea p {
         align-content: flex-start;
         justify-content: flex-start;
         align-items: flex-start;
     }
-    .section_03 .list-box .txtArea em {
+    #Work .list-box .txtArea em {
         font-size: 1rem;
         
     }
-    .section_05 .txtArea {
+
+    /* Mobile Contact style */
+    #Contact .txtArea {
         font-size: 1.4rem;
     }
 }

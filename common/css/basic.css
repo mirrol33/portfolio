@@ -52,6 +52,9 @@ input:focus{
 }
 /* root */
 :root {
-	--basic-font-family: "Circular Medium", "Noto Sans KR";
+	--basic-font-family: "Poppins", "Noto Sans KR";
 	--head-font-family: "Noto Sans KR";
+	--basic-font-color: #111;
+	--bg-font-color: #fff;
+	--basic-bg-color: #111;
 }
