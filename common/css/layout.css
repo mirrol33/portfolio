@@ -128,14 +128,13 @@ footer .copyright {
     /* header mobile ver. */
     header {
         padding: 1rem 0 !important;
-        background: #111;
+        background: rgba(0, 0, 0, .6);
     }
     header .inner {
         width: 90%;
     }
     header .logo {
         position: relative;
-        padding-bottom: 1rem;
     }
     header nav {
         display: flex;
@@ -144,7 +143,8 @@ footer .copyright {
         align-content: center;
         justify-content: center;
         align-items: center;
-        /* display: none !important; */
+        overflow: hidden;
+        height: 0;
     }
     header nav li {
         width: 100%;
