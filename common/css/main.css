@@ -21,6 +21,7 @@ section h2 {
     font-size: 4rem; 
     margin-bottom: 2rem;
     padding-top:10rem;
+    letter-spacing: -0.1rem;
 }
 
 /* About style */
@@ -31,7 +32,7 @@ section h2 {
     width: 100%;
 }
 #About .textArea em span {
-    letter-spacing: -0.2em;
+    letter-spacing: -2rem;
 }
 #About .textArea {
     position: absolute;
@@ -90,7 +91,7 @@ section h2 {
 #Skills ul li a {
     opacity: 1;
     transition: all 0.3s ease-in-out;
-    font-size: 4em;
+    font-size: 3em;
     padding: 0.2em;
     color: var(--bg-font-color);
     line-height: 1.25em;
@@ -152,7 +153,6 @@ section h2 {
 
 /* Projects style */
 #Projects {
-    background:#f1f1f1;
     color: #111;
     display: flex;
     justify-content: center;
@@ -168,12 +168,18 @@ section h2 {
     text-align: center;
 }
 #Projects ul span {
-    font-size: 2em;
+    font-size: 3em;
+    padding-top: 2rem;
+    color: #aaa;
+}
+#Projects ul:hover span {
+    color: #111;
 }
 #Projects ul li a {
     color: #111;
     font-size: 4em;
     line-height: 2em;
+    letter-spacing: -0.1rem;
 }
 #Projects ul li a em {
     font-weight: 400;
@@ -208,23 +214,27 @@ section h2 {
 
 /* Contact style */
 #Contact {
-    width: 100%;
+    background: #111;
 }
 #Contact .inner {
     position: relative;
     margin: 0 auto;
     width: 90%;
+    color: #fff;
 }
-
+#Contact h2 {
+    color: #fff;
+}
 #Contact .txtArea {
     font-size: 2rem;
     line-height: 1.2em;
     text-align: left;
     line-height: 1.2em;
+    letter-spacing: -0.1rem;
 }
 
 #Contact .txtArea h3 {
-    color: #aaa;
+    color: #ccc;
     font-size:1.2em;
     line-height: 1.2em;
 }
@@ -249,7 +259,11 @@ section h2 {
     }
 
     section h1 {font-size:4rem;}
-    section h2 {font-size:2.8rem; margin-bottom: 2rem;}
+    section h2 {
+        font-size:3.4rem;
+        letter-spacing: -0.1rem; 
+        margin-bottom: 2rem;
+    }
 
     /* Mobile About style */
     #About {
@@ -266,8 +280,8 @@ section h2 {
     }
 
     /* Mobile Skills style */
-    #Skills ul {
-        font-size: 1.4rem;
+    #Skills ul li a {
+        font-size: 2rem;
     }
 
 
@@ -290,6 +304,14 @@ section h2 {
     #Work .list-box .txtArea em {
         font-size: 1rem;
         
+    }
+
+    /* Mobile Projects style */
+    #Projects ul span {
+        font-size: 2rem;
+    }
+    #Projects ul li a {
+        font-size: 2rem;
     }
 
     /* Mobile Contact style */

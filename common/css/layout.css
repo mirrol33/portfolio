@@ -90,21 +90,25 @@ header nav li a.active {
 footer {
     position: relative; 
     width: 100%; 
-    height: auto; 
-    background: var(--basic-bg-color);
-    color: var(--bg-font-color);
+    height: auto;
+    background: #111; 
+    color: #fff;
 }
 footer .inner {
+    margin: 0 auto;
     padding: 2em 0;
+    border-top: 1px solid #aaa;
+    opacity: 0.6;
+    width: 90%;
 }
 footer .copyright {
     position: relative;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     padding: 0; 
     font-family: var(--head-font-family);
-    font-size: 1rem;
-    font-weight:100;
+    font-size: 0.8rem;
+    font-weight: 200;
 }
 
 /* mobile ver. */
