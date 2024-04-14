@@ -33,7 +33,7 @@ header {
     letter-spacing: -0.2px;
 }
 header.opaque {
-    background:rgba(255, 255, 255, .4);
+    background:rgba(255, 255, 255, .6);
     color:#222; 
 }
 .blur {
@@ -70,21 +70,33 @@ header .sns li a svg {
 header.opaque .sns li a svg {
     fill: #222;
 }
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
 header nav li {
     position: relative; 
     box-sizing: border-box; 
-    padding: 0.8em; 
+    padding: 0.8em 2em; 
     font-size: 1rem;
 }
 header nav li a {
-    font-weight: 400;
+    font-weight: 300;
     color:#fff;
 }
 header.opaque nav li a {
-    color:#222;
+    color:#111;
 }
 header nav li a.active {
-    color:#aaa;
+    color:#fff;
+    font-weight: 600;
+}
+header.opaque nav li a.active {
+    color: #111;
 }
 /* footer */
 footer {
@@ -116,23 +128,51 @@ footer .copyright {
     /* header mobile ver. */
     header {
         padding: 1rem 0 !important;
+        background: #111;
     }
     header .inner {
-        width: 96%;
+        width: 90%;
     }
     header .logo {
         position: relative;
+        padding-bottom: 1rem;
     }
     header nav {
-        display: none !important;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        /* display: none !important; */
+    }
+    header nav li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid;
+        border-color: rgba(255, 255, 255, .2);
+    }
+    header nav li:last-child {
+        border-bottom: none;
+    }
+    header nav li a {
+        display: block;
+        padding: 1rem 0;
+        width: 100%;
+    }
+    header nav li a.active {
+        font-weight: 600;
+    }
+    header.opaque nav li a.active {
+        color: #111;
+        font-weight: 600;
     }
     header .sns {
-        display: none !important;
+        /* display: none !important; */
     }
 
     /* footer mobile ver. */
     footer .copyright {
-        width:96%;
         font-size:0.8rem;
     }
 }

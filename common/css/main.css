@@ -1,7 +1,7 @@
 /* main Common style */
 main {
     position: relative;
-    margin: 0n auto;
+    margin: 0 auto;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -15,7 +15,8 @@ section {
     padding-bottom:8rem;
 }
 section h1 {
-    font-size: 8rem;
+    font-size: 6rem;
+    margin-bottom: 2rem;
 }
 section h2 {
     font-size: 4rem; 
@@ -30,9 +31,10 @@ section h2 {
     margin: 0 auto;
     padding: 0;    
     width: 100%;
+    overflow: hidden;
 }
 #About .textArea em span {
-    letter-spacing: -2rem;
+    letter-spacing: -1.4rem;
 }
 #About .textArea {
     position: absolute;
@@ -266,25 +268,30 @@ section h2 {
         padding: 6em 0;
     }
 
-    section h1 {font-size:4rem;}
+    section h1 {
+        font-size:3.2rem;
+    }
     section h2 {
-        font-size:3.4rem;
+        font-size:3.2rem;
         letter-spacing: -0.1rem; 
         margin-bottom: 2rem;
     }
 
     /* Mobile About style */
     #About {
-        width: 96%;
+        width: 100%;
     }
-
-    #About em span {
+    #About .textArea em span {
         letter-spacing: -0.6rem;
     }
 
     #About .about-text {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         width: 90%;
+    }
+    #About .videoArea {
+        width: 200%;
+        margin: 0 -50%;
     }
 
     /* Mobile Skills style */
@@ -294,9 +301,6 @@ section h2 {
 
 
     /* Mobile Work style */
-    #Work .history-list {
-        width: 96%;
-    }
     #Work .list-box {
         width: 100%;
     }

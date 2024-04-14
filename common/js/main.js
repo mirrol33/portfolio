@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // 이미지 중심 좌표 계산
             var imageX = mouseX - imageWidth / 2;
             var imageY = mouseY - imageHeight / 2;
-            console.log(imageX, imageY);
+            // console.log(imageX, imageY);
 
             // image[i].style.transform = `translate(${imageX}px, ${imageY}px)`;
             image[i].style.left = imageX + 'px';
