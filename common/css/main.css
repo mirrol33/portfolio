@@ -179,8 +179,8 @@ section h2 {
     text-align: center;
 }
 #Projects ul span {
-    font-size: 3em;
-    padding-top: 2rem;
+    font-size: 2rem;
+    padding: 4rem 0 1rem 0;
     color: #aaa;
 }
 #Projects ul:hover span {
@@ -188,8 +188,8 @@ section h2 {
 }
 #Projects ul li a {
     color: #111;
-    font-size: 4em;
-    line-height: 2em;
+    font-size: 2.4rem;
+    line-height: 4.2rem;
     letter-spacing: -0.1rem;
 }
 #Projects ul li a em {
