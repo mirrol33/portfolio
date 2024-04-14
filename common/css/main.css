@@ -266,10 +266,10 @@ section h2 {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     /* 태블릿 기기를 위한 스타일 지정 */
-    #Work .list-box {
+    #Work ul .list-box {
         width: 48%;
     }
-    #Work .list-box .txtArea p {
+    #Work ul .list-box .txtArea p {
         align-content: flex-start;
         justify-content: flex-start;
         align-items: flex-start;
@@ -317,19 +317,19 @@ section h2 {
 
 
     /* Mobile Work style */
-    #Work .list-box {
+    #Work ul .list-box {
         width: 100%;
     }
 
-    #Work .list-box .txtArea {
+    #Work ul .list-box .txtArea {
         line-height: 1.4rem;
     }
-    #Work .list-box .txtArea p {
+    #Work ul .list-box .txtArea p {
         align-content: flex-start;
         justify-content: flex-start;
         align-items: flex-start;
     }
-    #Work .list-box .txtArea em {
+    #Work ul .list-box .txtArea em {
         font-size: 1rem;
         
     }
