@@ -1,4 +1,4 @@
-/* main Common Css */
+/* main Common style */
 main {
     position: relative;
     margin: 0n auto;
@@ -9,7 +9,7 @@ main {
 }
 section {
     text-align:center;
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.04rem;
     position: relative;    
     width: 100%;
     padding-bottom:10rem;
@@ -25,13 +25,25 @@ section h2 {
 
 /* About style */
 #About {
-    margin: 0 auto;
-    padding: 10rem 0;
     position: relative;
+    margin: 0 auto;
+    padding: 0;    
     width: 100%;
 }
-#About em span {
-    letter-spacing: -1rem;
+#About .textArea em span {
+    letter-spacing: -0.2em;
+}
+#About .textArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 #About .about-text {
     width: 60%;
@@ -41,12 +53,12 @@ section h2 {
     position: relative;
     color: var(--bg-font-color);
 }
+#About .about-text p {
+    text-shadow: 0px 0px 10px gray
+}
 #About .videoArea {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: 100vh;
+    height: auto;
     z-index: -1;
 }
 #About .video-container {
@@ -66,7 +78,7 @@ section h2 {
 /* Skills style */
 #Skills {
     background:var(--basic-bg-color);
-    color: #ccc;
+    color: #fff;
 }
 #Skills ul {
     display: flex;
@@ -76,6 +88,7 @@ section h2 {
     text-align: center;
 }
 #Skills ul li a {
+    opacity: 1;
     transition: all 0.3s ease-in-out;
     font-size: 4em;
     padding: 0.2em;
@@ -83,7 +96,7 @@ section h2 {
     line-height: 1.25em;
 }
 #Skills ul:hover li:not(:hover) a {
-    opacity: 0.5;
+    opacity: 0.8;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
 }
@@ -141,6 +154,11 @@ section h2 {
 #Projects {
     background:#f1f1f1;
     color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 #Projects ul {
     display: flex;
@@ -157,10 +175,13 @@ section h2 {
     font-size: 4em;
     line-height: 2em;
 }
+#Projects ul li a em {
+    font-weight: 400;
+}
 
 #Projects ul:hover li:not(:hover) a {
     opacity: 0.5;
-    color: transparent;
+    color: #aaa;
     -webkit-text-stroke: 1px #000;
 }
 
@@ -176,11 +197,12 @@ section h2 {
     z-index: 1;
     /* transform: translate(-50%, -50%); */
     width: 0;
+    opacity: 0;
     transition: width 0.3s;
 }
 .project-box:hover .image {
     width: 400px;
-    opacity: 0.4;
+    opacity: 0.6;
 
 }
 

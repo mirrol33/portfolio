@@ -69,13 +69,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-
+    
     /* 스크롤 다운시 상단 메뉴바 색성 변경 */
     const header = document.querySelector('header');
-    let isScrolling = false;
+    // let isScrolling = false;
     let scrollTimeout;
 
     window.addEventListener('scroll', function() {
