@@ -149,6 +149,9 @@ section h2 {
     flex-direction: column;
     text-align: center;
 }
+#Projects ul span {
+    font-size: 2em;
+}
 #Projects ul li a {
     color: #111;
     font-size: 4em;
