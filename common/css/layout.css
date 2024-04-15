@@ -123,9 +123,9 @@ footer .copyright {
     font-weight: 200;
 }
 
-/* mobile ver. */
-@media only screen and (max-width: 767px) {
-    /* header mobile ver. */
+/* Tablets ver. */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Tablets header style */
     header {
         padding: 1rem 0 !important;
         background: rgba(0, 0, 0, .6);
@@ -167,11 +167,55 @@ footer .copyright {
         color: #111;
         font-weight: 600;
     }
-    header .sns {
-        /* display: none !important; */
+
+}
+
+/* Mobile ver. */
+@media only screen and (max-width: 767px) {
+    /* Mobile header style */
+    header {
+        padding: 1rem 0 !important;
+        background: rgba(0, 0, 0, .6);
+    }
+    header .inner {
+        width: 90%;
+    }
+    header .logo {
+        position: relative;
+    }
+    header nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 0;
+    }
+    header nav li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid;
+        border-color: rgba(255, 255, 255, .2);
+    }
+    header nav li:last-child {
+        border-bottom: none;
+    }
+    header nav li a {
+        display: block;
+        padding: 1rem 0;
+        width: 100%;
+    }
+    header nav li a.active {
+        font-weight: 600;
+    }
+    header.opaque nav li a.active {
+        color: #111;
+        font-weight: 600;
     }
 
-    /* footer mobile ver. */
+    /* Mobile footer style */
     footer .copyright {
         font-size:0.8rem;
     }

@@ -14,10 +14,6 @@ section {
     width: 100%;
     padding-bottom:8rem;
 }
-section h1 {
-    font-size: 8rem;
-    padding-bottom: 4rem;
-}
 section h2 {
     font-size: 4rem; 
     margin-bottom: 2rem;
@@ -34,8 +30,12 @@ section h2 {
     overflow: hidden;
     background: #111;
 }
-#About .textArea em span {
-    letter-spacing: -2rem;
+#About .textArea h1 {
+    font-size: 6rem;
+    padding-bottom: 3rem;
+}
+#About .textArea h1 em span {
+    letter-spacing: -1.4rem;
 }
 #About .textArea {
     position: absolute;
@@ -52,7 +52,9 @@ section h2 {
 #About .about-text {
     width: 60%;
     margin: 0 auto;
-    font-size: 4rem;
+    font-size: 2.8rem;
+    letter-spacing: -0.01rem;
+    line-height: 3.6rem;
     text-align: center;
     position: relative;
     color: var(--bg-font-color);
@@ -154,7 +156,7 @@ section h2 {
 }
 #Work .list-box .txtArea {
     font-size: 1em;
-    background: #ccc;
+    background: #fff;
     padding: 0.8em;
     border-radius: 0em 0em 1em 1em;
 }
@@ -264,8 +266,20 @@ section h2 {
     line-height: 1.2em;
 }
 
+/* Tablets ver. */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    /* 태블릿 기기를 위한 스타일 지정 */
+    /* Tablets About style */
+    #About .textArea h1 {
+        font-size: 5rem;
+        padding-bottom: 2rem;
+    }
+    #About .about-text {
+        width: 90%;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    /* Tablets Work style */
     #Work ul .list-box {
         width: 48%;
     }
@@ -282,11 +296,6 @@ section h2 {
     section {
         padding: 6em 0;
     }
-
-    section h1 {
-        font-size: 4rem;
-        padding-bottom: 2rem;
-    }
     section h2 {
         font-size:3.2rem;
         letter-spacing: -0.1rem; 
@@ -297,13 +306,18 @@ section h2 {
     #About {
         width: 100%;
     }
-    #About .textArea em span {
+    #About .textArea h1 {
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+    #About .textArea h1 em span {
         letter-spacing: -1rem;
     }
 
     #About .about-text {
         font-size: 1.4rem;
         width: 90%;
+        line-height: 2rem;
     }
     #About .videoArea {
         width: 200%;
