@@ -74,7 +74,7 @@ section h2 {
     height: 0;
     overflow: hidden;
 }
-#About .video-container video {
+#About .video-container img {
     position: absolute;
     top: 0;
     left: 0;
@@ -294,7 +294,7 @@ section h2 {
 @media only screen and (max-width: 767px) {
 
     section {
-        padding: 6em 0;
+        padding-bottom: 6rem;
     }
     section h2 {
         font-size:3.2rem;
