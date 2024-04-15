@@ -37,7 +37,7 @@ header.opaque {
     color:#222; 
 }
 header.opaque.open {
-    background:rgba(255, 255, 255, .6);
+    background:rgba(255, 255, 255, .8);
 }
 .blur {
     backdrop-filter: blur(4px);
