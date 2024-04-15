@@ -148,4 +148,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     document.addEventListener('mousemove', showImage);
 
+    /* 모바일 메뉴 버튼 클릭 시 토글 이벤트 */
+    const mobileNav = document.querySelector('.mobile_nav');
+    const nav = document.querySelector('header');
+
+    mobileNav.addEventListener('click', function() {
+        nav.classList.toggle('open'); // open 클래스를 추가하거나 제거하여 토글
+    });
+
 });

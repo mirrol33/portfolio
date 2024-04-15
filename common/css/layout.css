@@ -26,15 +26,18 @@ header {
     height: auto;
     background-color: transparent;
     transition: background-color 0.3s ease;
-    color:#fff;
+    color: #fff;
     font-family: var(--basic-font-family);
-    font-size:24px;
+    font-size: 24px;
     font-weight: 400;
     letter-spacing: -0.2px;
 }
 header.opaque {
     background:rgba(255, 255, 255, .6);
     color:#222; 
+}
+header.opaque.open {
+    background:rgba(255, 255, 255, .6);
 }
 .blur {
     backdrop-filter: blur(4px);
@@ -53,22 +56,25 @@ header .logo {
     font-family: var(--basic-font-family);
     font-weight: 600;
 }
-header .sns {
+header .icon_nav {
     position: absolute; 
     right:0; 
     top:0; 
     padding:0.4em 0;
 }
-header .sns li a {
+header .icon_nav li a {
     padding:0.1em;
 }
-header .sns li a svg {
+header .icon_nav li a svg {
     width: 1em;
     height: auto;
     fill: #fff;
 }
-header.opaque .sns li a svg {
+header.opaque .icon_nav li a svg {
     fill: #222;
+}
+header .icon_nav .mobile_nav {
+    display: none;
 }
 header nav {
     display: flex;
@@ -127,7 +133,9 @@ footer .copyright {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     /* Tablets header style */
     header {
-        padding: 1rem 0 !important;
+        padding: 1rem 0 !important;        
+    }
+    header.open {
         background: rgba(0, 0, 0, .6);
     }
     header .inner {
@@ -145,6 +153,9 @@ footer .copyright {
         align-items: center;
         overflow: hidden;
         height: 0;
+    }
+    header.open nav {
+        height: auto;
     }
     header nav li {
         width: 100%;
@@ -166,6 +177,9 @@ footer .copyright {
     header.opaque nav li a.active {
         color: #111;
         font-weight: 600;
+    }
+    header .icon_nav .mobile_nav {
+        display: block;
     }
 
 }
@@ -174,7 +188,9 @@ footer .copyright {
 @media only screen and (max-width: 767px) {
     /* Mobile header style */
     header {
-        padding: 1rem 0 !important;
+        padding: 1rem 0 !important;        
+    }
+    header.open {
         background: rgba(0, 0, 0, .6);
     }
     header .inner {
@@ -192,6 +208,9 @@ footer .copyright {
         align-items: center;
         overflow: hidden;
         height: 0;
+    }
+    header.open nav {
+        height: auto;
     }
     header nav li {
         width: 100%;
@@ -213,6 +232,9 @@ footer .copyright {
     header.opaque nav li a.active {
         color: #111;
         font-weight: 600;
+    }
+    header .icon_nav .mobile_nav {
+        display: block;
     }
 
     /* Mobile footer style */
