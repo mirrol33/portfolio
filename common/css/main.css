@@ -115,7 +115,7 @@ section h2 {
 
 /* Work style */
 #Work {
-    background: url("images/flower_pattern_bg.jpg") repeat;
+    background: url("../../images/flower_pattern_bg.jpg") repeat;
     background-attachment: fixed;
 }
 #Work .history-list {
