@@ -147,15 +147,16 @@ section h2 {
 }
 #Work .list-box .img-box {
     position: relative;
+    background: #f1f1f1;
     width: 100%;
     height: auto;
-    max-height: 240px;
-    background: #f4f4f4;
+    max-height: 240px;    
     overflow: hidden;
 }
 #Work .list-box .img-box img {
     width: 100%;
-    height: auto;
+    height: auto;    
+    margin-top: -28%;
 }
 #Work .list-box .txtArea {
     font-size: 1em;
@@ -314,6 +315,9 @@ section h2 {
         align-content: flex-start;
         justify-content: flex-start;
         align-items: flex-start;
+    }
+    #Work .list-box .img-box img {
+        margin-top: -18%;
     }
 }
 
