@@ -375,8 +375,10 @@ section h2 {
         align-items: flex-start;
     }
     #Work ul .list-box .txtArea em {
-        font-size: 1rem;
-        
+        font-size: 1rem;        
+    }
+    #Work .list-box .img-box img {
+        margin-top: -16%;
     }
 
     /* Mobile Projects style */
