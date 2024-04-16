@@ -328,7 +328,7 @@ section h2 {
         padding-bottom: 6rem;
     }
     section h2 {
-        font-size:3.2rem;
+        font-size:3rem;
         letter-spacing: -0.1rem; 
         margin-bottom: 2rem;
     }
@@ -383,15 +383,15 @@ section h2 {
 
     /* Mobile Projects style */
     #Projects ul span {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     #Projects ul li a {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     /* Mobile Skills style */
     #Skills ul li a {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
     /* Mobile Contact style */
