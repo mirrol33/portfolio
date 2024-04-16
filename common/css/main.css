@@ -16,7 +16,7 @@ section {
 }
 section h2 {
     font-size: 4rem; 
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     padding-top:8rem;
     letter-spacing: -0.1rem;
 }
@@ -387,6 +387,11 @@ section h2 {
     }
     #Projects ul li a {
         font-size: 2rem;
+    }
+
+    /* Mobile Skills style */
+    #Skills ul li a {
+        font-size: 1rem;
     }
 
     /* Mobile Contact style */
