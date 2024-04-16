@@ -117,8 +117,9 @@ section h2 {
 
 /* Work style */
 #Work {
-    background: url("../../images/flower_pattern_bg.jpg") repeat;
+    background: url("../../images/winter_bg.jpg") repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 #Work .history-list {
     position: relative;
@@ -137,6 +138,9 @@ section h2 {
 }
 #Work ul .list-box {
     filter: grayscale(0);
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px #333;
 }
 #Work ul:hover .list-box:not(:hover) {
     filter: grayscale(100%);
@@ -146,7 +150,6 @@ section h2 {
     width: 100%;
     height: auto;
     max-height: 240px;
-    border-radius: 1em 1em 0 0;
     background: #f4f4f4;
     overflow: hidden;
 }
@@ -157,8 +160,8 @@ section h2 {
 #Work .list-box .txtArea {
     font-size: 1em;
     background: #fff;
+    opacity: 0.8;
     padding: 0.8em;
-    border-radius: 0em 0em 1em 1em;
 }
 #Work .list-box .txtArea p {
     display: flex;
