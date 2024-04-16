@@ -140,7 +140,7 @@ section h2 {
     filter: grayscale(0);
     border-radius: 1em;
     overflow: hidden;
-    box-shadow: 0px 0px 10px 0px #333;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.4);
 }
 #Work ul:hover .list-box:not(:hover) {
     filter: grayscale(100%);
