@@ -380,6 +380,10 @@ section h2 {
     #Work .list-box .img-box img {
         margin-top: -12%;
     }
+    #Work ul:hover .list-box:not(:hover) {
+        filter: grayscale(0%);
+    }
+    
 
     /* Mobile Projects style */
     #Projects ul span {
