@@ -15,7 +15,7 @@ body {
     align-content: center;
     justify-content: center;
     align-items: center;
-    gap: 1rem;    
+    gap: 1em;    
 }
 
 /* header */
@@ -62,19 +62,21 @@ header .logo {
 header .icon_nav {
     position: absolute; 
     right:0; 
-    top:0; 
-    padding:0.4em 0;
+    top:0;
 }
-header .icon_nav li a {
-    padding:0.1em;
+header .mail_icon {
+    width: 1.2em;
 }
-header .icon_nav li a svg {
-    width: 1em;
-    height: auto;
+header .mail_icon,
+header .ham
+ {
     fill: #fff;
+    stroke: #fff;
 }
-header.opaque .icon_nav li a svg {
+header.opaque .mail_icon,
+header.opaque .ham {
     fill: #222;
+    stroke: #222;
 }
 header .icon_nav .mobile_nav {
     display: none;
@@ -108,6 +110,53 @@ header.opaque nav li a.active {
     color: #111;
 }
 
+/* ham nav style */
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 2em;
+}
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    /* stroke:#fff; */
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+.ham8 .top {
+    stroke-dasharray: 40 160;
+}
+.ham8 .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+}
+.ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+}
+.ham8.active .top {
+    stroke-dashoffset: -64px;
+}
+.ham8.active .middle {
+    transform: rotate(90deg);
+}
+.ham8.active .bottom {
+    stroke-dashoffset: -64px;
+}
+  
 /* footer */
 footer {
     position: relative; 
