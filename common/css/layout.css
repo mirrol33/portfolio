@@ -143,20 +143,8 @@ footer .copyright {
     pointer-events: none;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
-    box-shadow: 0 0 0 5px rgba(255, 255, 255, .2),
-    0 0 0 10px rgba(255, 255, 255, .2)
-    ;
-    animation: light 2s linear infinite;
 }
-@keyframes light {
-    0% {
-        transform: scale(0.4);
-    }
-    100% {
-        transform: scale(1);
-    }
 
-}
 
 /* Tablets ver. */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
