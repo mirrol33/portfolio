@@ -1,4 +1,7 @@
 /* layout */
+* {
+    cursor: none;
+}
 body {
     font-family: Arial, sans-serif;
     font-size: 12px;
@@ -104,6 +107,7 @@ header nav li a.active {
 header.opaque nav li a.active {
     color: #111;
 }
+
 /* footer */
 footer {
     position: relative; 
@@ -127,6 +131,18 @@ footer .copyright {
     font-family: var(--head-font-family);
     font-size: 0.8rem;
     font-weight: 200;
+}
+
+/* cursor */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
 }
 
 /* Tablets ver. */

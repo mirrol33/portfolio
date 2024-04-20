@@ -183,6 +183,7 @@ section h2 {
 
 /* Projects style */
 #Projects {
+    background: #f4f4f4;
     color: #111;
     display: flex;
     justify-content: center;
