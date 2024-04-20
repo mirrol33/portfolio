@@ -66,6 +66,7 @@ header .icon_nav {
 }
 header .mail_icon {
     width: 1.2em;
+    padding: 0.2em 0;
 }
 header .mail_icon,
 header .ham
