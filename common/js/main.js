@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    /* 상단 메뉴 이동 */
+    /* Header 메뉴 */
     const menuLinks = document.querySelectorAll('header nav a');
     const sections = document.querySelectorAll('main section');
     let isScrolling = false; // 스크롤 중 여부를 나타내는 플래그
@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     /* 스크롤 다운시 상단 메뉴바 색성 변경 */
     const header = document.querySelector('header');
-    // let isScrolling = false;
     let scrollTimeout;
 
     window.addEventListener('scroll', function() {
@@ -91,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (window.scrollY === 0) {
             header.classList.remove('opaque');
+            setActive(menuLinks[0]); // 스크롤 최상단일 때 첫번째 메뉴 활성화
         } else {
             header.classList.add('opaque');
         }
