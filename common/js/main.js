@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     /* Header 메뉴 */
-    const menuLinks = document.querySelectorAll('header nav a');
+    const menuLinks = document.querySelectorAll('nav li a');
     const sections = document.querySelectorAll('main section');
     let isScrolling = false; // 스크롤 중 여부를 나타내는 플래그
 
