@@ -358,9 +358,8 @@ section h2 {
 
     /* Mobile Skills style */
     #Skills ul li a {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
-
 
     /* Mobile Work style */
     #Work ul .list-box {
@@ -392,11 +391,6 @@ section h2 {
     }
     #Projects ul li a {
         font-size: 1.8rem;
-    }
-
-    /* Mobile Skills style */
-    #Skills ul li a {
-        font-size: 1.4rem;
     }
 
     .project-box:hover .image {
