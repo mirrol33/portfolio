@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1초마다 폰트 컬러 변경
     setInterval(changeColor, 200);
 
-    /* project image 마우스 오버 시 */
+    /* project 마우스 오버 시 이미지 따라다니기 */
     let image = document.querySelectorAll('.image');
 
     function showImage(e){
@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /* 모바일 메뉴 버튼 클릭 시 토글 이벤트 */
     const mobileNav = document.querySelector('.mobile_nav');
     const nav = document.querySelector('header');
+    const navIcon = document.querySelector('.ham');
 
     mobileNav.addEventListener('click', function() {
         nav.classList.toggle('open'); // open 클래스를 추가하거나 제거하여 토글
@@ -155,10 +156,11 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(function(link) {
         link.addEventListener('click', function() {
             nav.classList.remove('open'); // 클릭된 링크를 통해 네비게이션 메뉴가 닫힘
+            navIcon.classList.remove('active') // 메뉴가 닫히면 아이콘 모양 변경
         });
     });
 
-    /* cursor */
+    /* 바뀐 커서 모양 따라다니기 */
     let cursor = document.querySelector('.cursor');
     document.addEventListener('mousemove', (e) => {
         cursor.style.left = e.clientX + 'px';
