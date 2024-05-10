@@ -193,11 +193,11 @@ footer .copyright {
     pointer-events: none;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
-    transform: scale(0.5);
+    transform: scale(0.8);
     transition: transform 0.3s ease;
 }
 .cursor.hover {
-    transform: scale(2.4);
+    transform: scale(2.8);
 }
 
 
