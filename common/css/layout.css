@@ -60,9 +60,9 @@ header .logo {
     font-weight: 600;
 }
 header .icon_nav {
-    position: absolute; 
-    right:0; 
-    top:0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 header .mail_icon {
     width: 1.2em;
@@ -247,6 +247,17 @@ footer .copyright {
         color: #111;
         font-weight: 600;
     }
+
+    header .icon_nav {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1em;
+    }
+
     header .icon_nav .mobile_nav {
         display: block;
     }
@@ -299,6 +310,16 @@ footer .copyright {
         color: #111;
         font-weight: 600;
     }
+    header .icon_nav {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.8em;
+    }
+
     header .icon_nav .mobile_nav {
         display: block;
     }
