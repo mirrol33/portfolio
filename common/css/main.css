@@ -379,6 +379,9 @@ section h2 {
     #Work ul:hover .list-box:not(:hover) {
         filter: grayscale(0%);
     }
+    #Work .list-box .img-box {
+        max-height: 200px;
+    }
     
 
     /* Mobile Projects style */
