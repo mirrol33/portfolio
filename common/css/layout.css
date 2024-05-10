@@ -193,6 +193,11 @@ footer .copyright {
     pointer-events: none;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
+    transform: scale(0.5);
+    transition: transform 0.3s ease;
+}
+.cursor.hover {
+    transform: scale(2.4);
 }
 
 
@@ -207,9 +212,6 @@ footer .copyright {
     }
     header .inner {
         width: 90%;
-    }
-    header .logo {
-        position: relative;
     }
     header nav {
         display: flex;
@@ -262,9 +264,6 @@ footer .copyright {
     }
     header .inner {
         width: 90%;
-    }
-    header .logo {
-        position: relative;
     }
     header nav {
         display: flex;

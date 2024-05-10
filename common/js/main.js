@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
     const menuLinks = document.querySelectorAll('nav li a');
     const sections = document.querySelectorAll('main section');
-    
+
     let isScrolling = false; // 스크롤 중 여부를 나타내는 플래그
 
     menuLinks.forEach(function(menuLink) {
@@ -162,11 +162,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     /* 바뀐 커서 모양 따라다니기 */
-    let cursor = document.querySelector('.cursor');
+    const cursor = document.querySelector('.cursor');
+    // const links = document.querySelectorAll('a');
+
     document.addEventListener('mousemove', (e) => {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
         
-    })
+    });
+
+    // 링크에 마우스 오버 또는 아웃 시 hover 클래스를 토글
+    function toggleHover() {
+        cursor.classList.toggle('hover');
+    }
+
+    // 모든 링크에 대해 이벤트 리스너 등록
+    document.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('mouseenter', toggleHover);
+        link.addEventListener('mouseleave', toggleHover);
+    });
 
 });
