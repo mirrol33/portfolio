@@ -145,17 +145,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /* 모바일 메뉴 버튼 클릭 시 토글 이벤트 */
     const mobileNav = document.querySelector('.mobile_nav');
-    const nav = document.querySelector('header');
+    // const nav = document.querySelector('header');
     const navIcon = document.querySelector('.ham');
 
     mobileNav.addEventListener('click', function() {
-        nav.classList.toggle('open'); // open 클래스를 추가하거나 제거하여 토글
+        header.classList.toggle('open'); // open 클래스를 추가하거나 제거하여 토글
     });
 
     const navLinks = document.querySelectorAll('header nav li a');
     navLinks.forEach(function(link) {
         link.addEventListener('click', function() {
-            nav.classList.remove('open'); // 클릭된 링크를 통해 네비게이션 메뉴가 닫힘
+            header.classList.remove('open'); // 클릭된 링크를 통해 네비게이션 메뉴가 닫힘
             navIcon.classList.remove('active') // 메뉴가 닫히면 아이콘 모양 변경
         });
     });
