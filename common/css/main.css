@@ -152,11 +152,13 @@ section h2 {
     height: auto;
     max-height: 240px;    
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #Work .list-box .img-box img {
     width: 100%;
-    height: auto;    
-    margin-top: -27%;
+    height: auto;
 }
 #Work .list-box .txtArea {
     font-size: 1em;
@@ -317,9 +319,6 @@ section h2 {
         justify-content: flex-start;
         align-items: flex-start;
     }
-    #Work .list-box .img-box img {
-        margin-top: -18%;
-    }
 }
 
 /* Mobile ver. */
@@ -376,9 +375,6 @@ section h2 {
     }
     #Work ul .list-box .txtArea em {
         font-size: 1rem;        
-    }
-    #Work .list-box .img-box img {
-        margin-top: -12%;
     }
     #Work ul:hover .list-box:not(:hover) {
         filter: grayscale(0%);
