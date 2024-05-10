@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     /* Header 메뉴 */
+    const header = document.querySelector('header');
     const menuLinks = document.querySelectorAll('nav li a');
     const sections = document.querySelectorAll('main section');
+    
     let isScrolling = false; // 스크롤 중 여부를 나타내는 플래그
 
     menuLinks.forEach(function(menuLink) {
@@ -70,8 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    /* 스크롤 다운시 상단 메뉴바 색성 변경 */
-    const header = document.querySelector('header');
+    /* 스크롤 다운시 상단 메뉴바 색상 변경 */
     let scrollTimeout;
 
     window.addEventListener('scroll', function() {
