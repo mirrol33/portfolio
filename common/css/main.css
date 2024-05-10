@@ -399,6 +399,11 @@ section h2 {
         font-size: 1.4rem;
     }
 
+    .project-box:hover .image {
+        opacity: 0;
+        display: none;
+    }
+
     /* Mobile Contact style */
     #Contact .txtArea {
         font-size: 1.4rem;
