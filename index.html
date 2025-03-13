@@ -1,278 +1,333 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <title>FF11 Portfolio</title>
-        <!-- CSS -->
-        <link href="common/css/font.css" rel="stylesheet" type="text/css" />
-        <link href="common/css/basic.css" rel="stylesheet" type="text/css" />
-        <link href="common/css/layout.css" rel="stylesheet" type="text/css" />
-        <link href="common/css/main.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-        <header>
-            <div class="inner">
-                <div class="logo"><a href="./"><h1>FF11</h1></a></div>
-                <div class="icon_nav">
-                    <li><a href="mailto:freelife11@nate.com"><svg class="mail_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg></a></li>
-                    <!-- <li><a href="#none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a></li> -->
-                    <li class="mobile_nav"><a href="#none">
-                    <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
-                        <path
-                              class="line top"
-                              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
-                        <path
-                              class="line middle"
-                              d="m 30,50 h 40" />
-                        <path
-                              class="line bottom"
-                              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
-                      </svg>
-                </a></li>
-                </div>
-                <nav>
-                    <li><a href="#About" class="active">About Me</a></li>
-                    <li><a href="#Skills">Skills</a></li>
-                    <li><a href="#Work">Work History</a></li>
-                    <li><a href="#Projects">Projects</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </nav>
+    <title>FF11 Portfolio</title>
+    <!-- CSS -->
+    <link href="common/css/font.css" rel="stylesheet" type="text/css" />
+    <link href="common/css/basic.css" rel="stylesheet" type="text/css" />
+    <link href="common/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="common/css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <div class="logo">
+          <a href="./"><h1>FF11</h1></a>
+        </div>
+        <div class="icon_nav">
+          <li>
+            <a href="mailto:freelife11@nate.com"
+              ><svg
+                class="mail_icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512">
+                <path
+                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" /></svg></a>
+          </li>
+          <!-- <li><a href="#none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a></li> -->
+          <li class="mobile_nav">
+            <a href="#none">
+              <svg
+                class="ham hamRotate ham8"
+                viewBox="0 0 100 100"
+                width="80"
+                onclick="this.classList.toggle('active')">
+                <path
+                  class="line top"
+                  d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                <path class="line middle" d="m 30,50 h 40" />
+                <path
+                  class="line bottom"
+                  d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+              </svg>
+            </a>
+          </li>
+        </div>
+        <nav>
+          <li><a href="#About" class="active">About Me</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Work">Work History</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section id="About">
+        <div class="inner">
+          <div class="videoArea">
+            <div class="video-container">
+              <img src="images/rain_tiny.gif" />
             </div>
-        </header>
-        <main id="main">
-            <section id="About">
-                <div class="inner">
-                    <div class="videoArea">
-                        <div class="video-container">
-                            <img src="images/rain_tiny.gif">
-                        </div>
-                    </div>
-                    <div class="textArea">
-                        <h1>
-                            <em class="is-colored main-title">
-                                <span>F</span>
-                                <span>r</span>
-                                <span>e</span>
-                                <span>e</span>
-                                <span>l</span>
-                                <span>i</span>
-                                <span>F</span>
-                                <span>1</span>
-                                <span>1</span>
-                            </em>
-                        </h1>
-                        <div class="about-text">
-                            <p>FF11 is a web publisher who completes user-centered web design based on various experiences.</p>
-                        </div>
-                    </div>
+          </div>
+          <div class="textArea">
+            <h1>
+              <em class="is-colored main-title">
+                <span>F</span>
+                <span>r</span>
+                <span>e</span>
+                <span>e</span>
+                <span>l</span>
+                <span>i</span>
+                <span>F</span>
+                <span>1</span>
+                <span>1</span>
+              </em>
+            </h1>
+            <div class="about-text">
+              <p>
+                FF11 is a web publisher who completes user-centered web design based on various experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Skills" class="section_02">
+        <div class="inner">
+          <h2>Skills</h2>
+          <ul>
+            <li><a href="#none">HTML</a></li>
+            <li><a href="#none">CSS</a></li>
+            <li><a href="#none">SCSS(SASS)</a></li>
+            <li><a href="#none">JavaScript</a></li>
+            <li><a href="#none">React</a></li>
+            <li><a href="#none">jQuery</a></li>
+            <li><a href="#none">PHP</a></li>
+            <li><a href="#none">Flutter</a></li>
+            <li><a href="#none">Python</a></li>
+            <li><a href="#none">Git</a></li>
+            <li><a href="#none">Figma</a></li>
+            <li><a href="#none">Photoshop</a></li>
+            <li><a href="#none">Illustrator</a></li>
+          </ul>
+        </div>
+      </section>
+      <section id="Work" class="section_03">
+        <div>
+          <h2>Work History</h2>
+          <ul class="history-list flex">
+            <li class="list-box">
+              <a href="https://teamswan.co.kr/home" target="_blank">
+                <div class="img-box"><img src="images/teamswan.png" /></div>
+                <div class="txtArea">
+                  <p><b>(주)팀스완</b> <em>2022.5 ~ 2023.11 (1년7개월)</em></p>
                 </div>
-            </section>
-            <section id="Skills" class="section_02">
-                <div class="inner">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li><a href="#none">HTML</a></li>
-                        <li><a href="#none">CSS</a></li>
-                        <li><a href="#none">SCSS(SASS)</a></li>
-                        <li><a href="#none">JavaScript</a></li>
-                        <li><a href="#none">React</a></li>
-                        <li><a href="#none">jQuery</a></li>
-                        <li><a href="#none">PHP</a></li>
-                        <li><a href="#none">Flutter</a></li>
-                        <li><a href="#none">Python</a></li>
-                        <li><a href="#none">Git</a></li>
-                        <li><a href="#none">Figma</a></li>
-                        <li><a href="#none">Photoshop</a></li>
-                        <li><a href="#none">Illustrator</a></li>
-                    </ul>                    
+              </a>
+            </li>
+            <li class="list-box">
+              <a href="https://www.mipretty.co.kr/" target="_blank">
+                <div class="img-box"><img src="images/minmi.png" /></div>
+                <div class="txtArea">
+                  <p>
+                    <b>(주)GSA [미앤미메디컬그룹]</b>
+                    <em>2017.11 ~ 2021.09 (3년11개월)</em>
+                  </p>
                 </div>
-            </section>
-            <section id="Work" class="section_03">
-                <div>
-                    <h2>Work History</h2>
-                    <ul class="history-list flex">
-                        <li class="list-box">
-                            <a href="https://teamswan.co.kr/home" target="_blank">
-                                <div class="img-box"><img src="images/teamswan.png"></div>
-                                <div class="txtArea">
-                                    <p><b>(주)팀스완</b> <em>2022.5 ~ 2023.11 (1년7개월)</em></p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-box">
-                            <a href="https://www.mipretty.co.kr/" target="_blank">
-                                <div class="img-box"><img src="images/minmi.png"></div>
-                                <div class="txtArea">
-                                    <p><b>(주)GSA [미앤미메디컬그룹]</b> <em>2017.11 ~ 2021.09 (3년11개월)</em></p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-box">
-                            <a href="#none">
-                                <div class="img-box"><img src="images/leancompany.png"></div>
-                                <div class="txtArea">
-                                    <p><b>(주)린앤컴퍼니</b> <em>2017.8 ~ 2017.10 (3개월)</em></p>
-                                </div>
-                            </a> 
-                        </li>
-                        <li class="list-box">
-                            <a href="https://blog.naver.com/freelife_11" target="_blank">
-                                <div class="img-box"><img src="images/freelife11.png"></div>
-                                <div class="txtArea">
-                                    <p><b>프리라이프11 [프리랜서]</b> <em>2014.01 ~ 2016.12 (3년)</em></p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-box">
-                            <a href="https://mutodesign.co.kr/" target="_blank">
-                                <div class="img-box"><img src="images/muto.png"></div>
-                                <div class="txtArea">
-                                    <p><b>(주)뮤토디자인</b> <em>2012.04 ~ 2012.06 (4개월)</em></p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-box">
-                            <a href="#none">
-                                <div class="img-box"><img src="images/student.png"></div>
-                                <div class="txtArea">
-                                    <p><b>비즈인</b> <em>2010.11 ~ 2011.10 (1년)</em></p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+              </a>
+            </li>
+            <li class="list-box">
+              <a href="#none">
+                <div class="img-box"><img src="images/leancompany.png" /></div>
+                <div class="txtArea">
+                  <p><b>(주)린앤컴퍼니</b> <em>2017.8 ~ 2017.10 (3개월)</em></p>
                 </div>
-            </section>
-            <section id="Projects">
-                <h2>Projects</h2>
-                <ul>
-                    <span>2025</span>
-                    <li class="project-box">
-                        <a href="https://mirrol33.github.io/FED-TEAM-UP/2%EC%B0%A8_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/3.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/" target="_blank">픽사 UP<em>(개인프로젝트)</em></a>
-                        <div class="image"><p><img src="images/up.png" /></p></div>
-                    </li>
-                    <li class="project-box">
-                        <a href="https://mirrol33.github.io/FED-Project-LMK/1%EC%B0%A8_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/" target="_blank">고혼진<em>(개인프로젝트)</em></a>
-                        <div class="image"><p><img src="images/kohonjin.png" /></p></div>
-                    </li>
-                </ul>
-                <ul>
-                    <span>2024</span>
-                    <li class="project-box">
-                        <a href="https://nottycurly.com" target="_blank">노티컬리<em>(에리얼즈냅)</em></a>
-                        <div class="image"><p><img src="images/nottycurly.png" /></p></div>
-                    </li>
-                </ul>
-                <ul>
-                    <span>2022 ~ 2023</span>
-                    <li class="project-box">
-                        <a href="https://youlief.com" target="_blank">유리프</a>
-                        <div class="image"><p><img src="images/youlief.png" /></p></div>
-                    </li>
-                    <li class="project-box">
-                        <a href="https://bjgalbishop.com" target="_blank">벽제갈비</a>
-                        <div class="image"><p><img src="images/bjgalbishop.png" /></p></div>
-                    </li>
-                    <li class="project-box">
-                        <a href="https://korea.deeplink.cloud" target="_blank">딥링크</a>
-                        <div class="image"><p><img src="images/deeplink.png" /></p></div>                        
-                    </li>
-                    <li class="project-box">
-                        <a href="https://crepax.kr" target="_blank">크레팍스</a>
-                        <div class="image"><p><img src="images/crepax.png" /></p></div>                       
-                    </li>
-                    <li class="project-box">
-                        <a href="https://novastem.co.kr" target="_blank">노바스템</a>
-                        <div class="image"><p><img src="images/novastem.png" /></p></div>                        
-                    </li>
-                    <li class="project-box">
-                        <a href="https://useaseoul.com" target="_blank">유즈아</a>
-                        <div class="image"><p><img src="images/useaseoul.png" /></p></div>                        
-                    </li>
-                    <li class="project-box">
-                        <a href="https://perents.co.kr" target="_blank">페런츠</a>
-                        <div class="image"><p><img src="images/perents.png" /></p></div>                        
-                    </li>                    
-                    <li class="project-box">
-                        <a href="https://boneking.co.kr" target="_blank">본킹</a>
-                        <div class="image"><p><img src="images/boneking.png" /></p></div>                        
-                    </li>
-                    <li class="project-box">
-                        <a href="https://www.steelbrotech.com/" target="_blank">스틸브로</a>
-                        <div class="image"><p><img src="images/steelbrotech.png" /></p></div>                        
-                    </li>
-                    <li class="project-box">
-                        <a href="https://drminish.co.kr" target="_blank">닥터미니쉬</a>
-                        <div class="image"><p><img src="images/drminish.png" /></p></div>                        
-                    </li>
-                    <li class="project-box">
-                        <a href="https://subackdang.co.kr/" target="_blank">수백당</a>
-                        <div class="image"><p><img src="images/subackdang.png" /></p></div>                        
-                    </li>
-                    <li class="project-box">
-                        <a href="https://tasted.store/" target="_blank">테이스티드</a>
-                        <div class="image"><p><img src="images/tasted.png" /></p></div>                        
-                    </li>                                        
-                    <li class="project-box">
-                        <a href="https://getcomfy.co.kr" target="_blank">겟컴피</a>
-                        <div class="image"><p><img src="images/getcomfy.png" /></p></div>                        
-                    </li>                    
-                    <li class="project-box">
-                        <a href="http://ecudemo268524.cafe24.com" target="_blank">카페24 쇼핑몰 템플릿</a>
-                        <div class="image"><p><img src="images/template.png" /></p></div>                        
-                    </li>
-                </ul>
-                <ul>
-                    <span>2021</span>
-                    <li class="project-box">
-                        <a href="http://www.mipretty.co.kr" target="_blank">미앤미 통합 홈페이지</a>
-                        <div class="image"><p><img src="images/mipretty.png" /></p></div>                                          
-                    </li>
-                    <li class="project-box">
-                        <a href="http://minmiacademy.co.kr" target="_blank">미앤미 아카데미</a>
-                        <div class="image"><p><img src="images/minmiacademy.png" /></p></div>                        
-                    </li>
-                    <li class="project-box">
-                        <a href="http://minminetworks.co.kr" target="_blank">미앤미 네트워크</a>
-                        <div class="image"><p><img src="images/minminetworks.png" /></p></div>
-                    </li>
-                </ul>
-                <ul>
-                    <span>2018</span>
-                    <li class="project-box">
-                        <a href="http://www.pantone.kr" target="_blank">팬톤코리아</a>
-                        <div class="image"><p><img src="images/pantone.png" /></p></div>                        
-                    </li>
-                </ul>
-                <ul>
-                    <span>2017</span>
-                    <li class="project-box">
-                        <a href="https://blog.naver.com/freelife_11" target="_blank">프리라이프11 블로그<em>(개인블로그)</em></a>
-                        <div class="image"><p><img src="images/freelife11blog.png" /></p></div>                      
-                    </li>
-                </ul>
-            </section>
-            <section id="Contact" class="section_05">
-                <h2>Contact</h2>
-                <div class="inner">
-                    <div class="txtArea">
-                        <h3>FF11 is a web publisher </h3>
-                        <p><a href="mailto:freelife11@nate.com">freelife11@nate.com</a></p>
-                        <p>I hope you will contact me.</p>
-                    </div>
-                </div>   
-            </section>
-        </main>
-        <footer>
-            <div class="inner">
-                <div class="copyright">
-                    Copyright © FreeliFe11 All rights reserved.
+              </a>
+            </li>
+            <li class="list-box">
+              <a href="https://blog.naver.com/freelife_11" target="_blank">
+                <div class="img-box"><img src="images/freelife11.png" /></div>
+                <div class="txtArea">
+                  <p>
+                    <b>프리라이프11 [프리랜서]</b>
+                    <em>2014.01 ~ 2016.12 (3년)</em>
+                  </p>
                 </div>
-            </div>            
-        </footer>
-        <div class="cursor"></div>
-        <!-- JS -->
-        <script src="common/js/main.js"></script>
-    </body>
+              </a>
+            </li>
+            <li class="list-box">
+              <a href="https://mutodesign.co.kr/" target="_blank">
+                <div class="img-box"><img src="images/muto.png" /></div>
+                <div class="txtArea">
+                  <p>
+                    <b>(주)뮤토디자인</b> <em>2012.04 ~ 2012.06 (4개월)</em>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="list-box">
+              <a href="#none">
+                <div class="img-box"><img src="images/student.png" /></div>
+                <div class="txtArea">
+                  <p><b>비즈인</b> <em>2010.11 ~ 2011.10 (1년)</em></p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="Projects">
+        <h2>Projects</h2>
+        <ul>
+          <span>2025</span>
+          <li class="project-box">
+            <a
+              href="https://mirrol33.github.io/FED-TEAM-UP/2%EC%B0%A8_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/3.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/"
+              target="_blank"
+              >픽사 UP<em>(개인프로젝트)</em></a>
+            <div class="image">
+              <p><img src="images/up.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a
+              href="https://mirrol33.github.io/FED-Project-LMK/1%EC%B0%A8_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/"
+              target="_blank"
+              >고혼진<em>(개인프로젝트)</em></a>
+            <div class="image">
+              <p><img src="images/kohonjin.png" /></p>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <span>2024</span>
+          <li class="project-box">
+            <a href="https://nottycurly.com" target="_blank"
+              >노티컬리<em>(에리얼즈냅)</em></a>
+            <div class="image">
+              <p><img src="images/nottycurly.png" /></p>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <span>2022 ~ 2023</span>
+          <li class="project-box">
+            <a href="https://youlief.com" target="_blank">유리프</a>
+            <div class="image">
+              <p><img src="images/youlief.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="https://bjgalbishop.com" target="_blank">벽제갈비</a>
+            <div class="image">
+              <p><img src="images/bjgalbishop.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="https://korea.deeplink.cloud" target="_blank">딥링크</a>
+            <div class="image">
+              <p><img src="images/deeplink.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="https://crepax.kr" target="_blank">크레팍스</a>
+            <div class="image">
+              <p><img src="images/crepax.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="https://useaseoul.com" target="_blank">유즈아</a>
+            <div class="image">
+              <p><img src="images/useaseoul.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="https://perents.co.kr" target="_blank">페런츠</a>
+            <div class="image">
+              <p><img src="images/perents.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="https://boneking.co.kr" target="_blank">본킹</a>
+            <div class="image">
+              <p><img src="images/boneking.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="https://www.steelbrotech.com/" target="_blank">스틸브로</a>
+            <div class="image">
+              <p><img src="images/steelbrotech.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="https://drminish.co.kr" target="_blank">닥터미니쉬</a>
+            <div class="image">
+              <p><img src="images/drminish.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="https://subackdang.co.kr/" target="_blank">수백당</a>
+            <div class="image">
+              <p><img src="images/subackdang.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="https://tasted.store/" target="_blank">테이스티드</a>
+            <div class="image">
+              <p><img src="images/tasted.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="http://ecudemo268524.cafe24.com" target="_blank"
+              >카페24 쇼핑몰 템플릿</a>
+            <div class="image">
+              <p><img src="images/template.png" /></p>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <span>2021</span>
+          <li class="project-box">
+            <a href="http://www.mipretty.co.kr" target="_blank">미앤미 통합 홈페이지</a>
+            <div class="image">
+              <p><img src="images/mipretty.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="http://minmiacademy.co.kr" target="_blank">미앤미 아카데미</a>
+            <div class="image">
+              <p><img src="images/minmiacademy.png" /></p>
+            </div>
+          </li>
+          <li class="project-box">
+            <a href="http://minminetworks.co.kr" target="_blank">미앤미 네트워크</a>
+            <div class="image">
+              <p><img src="images/minminetworks.png" /></p>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <span>2018</span>
+          <li class="project-box">
+            <a href="http://www.pantone.kr" target="_blank">팬톤코리아</a>
+            <div class="image">
+              <p><img src="images/pantone.png" /></p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="Contact" class="section_05">
+        <h2>Contact</h2>
+        <div class="inner">
+          <div class="txtArea">
+            <h3>FF11 is a web publisher</h3>
+            <p><a href="mailto:freelife11@nate.com">freelife11@nate.com</a></p>
+            <p>I hope you will contact me.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="inner">
+        <div class="copyright">Copyright © FreeliFe11 All rights reserved.</div>
+      </div>
+    </footer>
+    <div class="cursor"></div>
+    <!-- JS -->
+    <script src="common/js/main.js"></script>
+  </body>
 </html>
