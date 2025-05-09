@@ -111,6 +111,17 @@ header.opaque nav li a.active {
     color: #111;
 }
 
+.notion_logo {
+        position: relative;
+        width: min(10vw, 50px);
+        height: auto;
+        float: right;
+    }
+    .notion_logo img {
+        width: 100%;
+        height: auto;
+    }
+
 /* ham nav style */
 .ham {
     cursor: pointer;
@@ -261,6 +272,8 @@ footer .copyright {
     header .icon_nav .mobile_nav {
         display: block;
     }
+
+    
 
 }
 
